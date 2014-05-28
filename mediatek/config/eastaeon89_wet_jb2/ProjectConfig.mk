@@ -663,7 +663,7 @@ MTK_HWC_SUPPORT=yes
 # Used to enable hwcomposer
 MTK_HWC_SUPPORT_V0=no
 MTK_HWC_VERSION=1.0
-MTK_HW_ENHANCE=no
+MTK_HW_ENHANCE=yes
 
 # increase the memory limit value for image  support
 MTK_IMAGE_LARGE_MEM_LIMIT=no
