@@ -4,6 +4,9 @@ SUBLEVEL = 5
 EXTRAVERSION =
 NAME = Saber-toothed Squirrel
 
+# Build kernel in user mode
+export TARGET_BUILD_VARIANT = user
+
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
 # More info can be located in ./README

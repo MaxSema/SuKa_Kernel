@@ -27,7 +27,7 @@ rm $OUT_DIRECTORY/* -R
 fi
 
 #Kernel part
-make -j all
+make -j16
 cp arch/arm/boot/zImage $OUT_DIRECTORY/zImage
 
 #Modules part
