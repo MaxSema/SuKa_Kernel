@@ -33,15 +33,10 @@
 # applicable license agreements with MediaTek Inc.
 
 
-include $(srctree)/../mediatek/build/Makefile
-ifneq ($(KBUILD_SRC),)
-$(call codebase-path,kernel,$(srctree)/..)
-else
-$(call codebase-path,kernel)
-endif
-#TO-DO 
+include $(srctree)/mediatek/build/Makefile
+$(call codebase-path,kernel,$(srctree),mt6589,eastaeon89_wet_jb2)
 #$(call relative-include,common.mk)
-include $(srctree)/../mediatek/build/kernel/common.mk
+include $(srctree)/mediatek/build/kernel/common.mk
 MODULE_PREFIX_KERNEL := CUSTOM_KERNEL_
 MODULE_PREFIX_HAL    := CUSTOM_HAL_
 machine-y       := $(call lc,$(MTK_PLATFORM))
@@ -72,9 +67,7 @@ ifneq (,$(MTK_MODEM_SUPPORT))
 KBUILD_CPPFLAGS += -D$(call uc,$(MTK_MODEM_SUPPORT))
 endif
 
-ifeq ($(TARGET_BUILD_VARIANT),user)
- KBUILD_CFLAGS += -DUSER_BUILD_KERNEL
-endif
+KBUILD_CFLAGS += -DUSER_BUILD_KERNEL
 
 ifeq (,$(M))
 clean: mtkclean
