@@ -7,16 +7,16 @@
 #include <linux/debugfs.h>
 #include <linux/wait.h>
 
-#include <disp_drv_platform.h>
+#include "../../../platform/mt6589/kernel/drivers/video/disp_drv_platform.h"
 #include "disp_drv_log.h"
 
-#include "lcd_drv.h"
-#include "lcd_reg.h"
-#include "dpi_drv.h"
-#include "dpi1_drv.h"
-#include "dpi_reg.h"
-#include "dsi_drv.h"
-#include "dsi_reg.h"
+#include "../../../platform/mt6589/kernel/drivers/video/lcd_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/lcd_reg.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi1_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi_reg.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dsi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dsi_reg.h"
 #include "mtkfb.h"
 
 #if defined(MTK_TVOUT_SUPPORT)

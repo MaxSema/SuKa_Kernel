@@ -3,7 +3,7 @@
 #include <linux/semaphore.h>
 #include <linux/slab.h>
 
-#include <disp_drv_platform.h>
+#include "../../../platform/mt6589/kernel/drivers/video/disp_drv_platform.h"
 #include "mtkfb_console.h"
 
 // ---------------------------------------------------------------------------

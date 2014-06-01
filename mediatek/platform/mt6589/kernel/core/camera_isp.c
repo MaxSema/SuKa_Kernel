@@ -37,7 +37,7 @@
 #include <mach/m4u.h>
 
 //
-#include "../smi/smi_common.h"
+#include "../drivers/smi/smi_common.h"
 
 typedef unsigned char           MUINT8;
 typedef unsigned int            MUINT32;

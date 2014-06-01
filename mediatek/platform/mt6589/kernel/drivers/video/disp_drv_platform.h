@@ -120,9 +120,9 @@
 //#include <mach/boot.h>
 #include <board-custom.h>
 #include <linux/disp_assert_layer.h>
-#include "ddp_drv.h"
-#include "ddp_path.h"
-#include "ddp_rdma.h"
+#include "../dispsys/ddp_drv.h"
+#include "../dispsys/ddp_path.h"
+#include "../dispsys/ddp_rdma.h"
 #include "dsi_drv.h"
 #endif
 

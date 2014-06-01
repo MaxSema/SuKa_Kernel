@@ -54,3 +54,7 @@ java -jar $SCRIPTS_DIRECTORY/../signapk.jar $CERTIFICATES_DIRECTORY/certificate.
 fi
 fi
 fi
+
+echo "Cleaning kernel tree for next buildings..."
+make -j16 clean mrproper
+echo "Finished"

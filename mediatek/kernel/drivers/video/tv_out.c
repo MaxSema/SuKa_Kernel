@@ -31,13 +31,13 @@
 #include <mach/mt_reg_base.h>
 //#include <mach/mt_pmic_feature_api.h> //PMIC Analog switch select
 
-#include "tv_def.h"
-#include "tvc_drv.h"
-#include "tve_drv.h"
-#include "tvrot_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/tv_def.h"
+#include "../../../platform/mt6589/kernel/drivers/video/tvc_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/tve_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/tvrot_drv.h"
 #include "tv_out.h"
 #include "disp_drv.h"
-#include "lcd_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/lcd_drv.h"
 #include "lcm_drv.h"
 #include <linux/xlog.h>
 

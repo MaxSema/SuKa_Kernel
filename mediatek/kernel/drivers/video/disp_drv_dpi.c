@@ -7,14 +7,14 @@
 #include <linux/semaphore.h>
 
 #include "disp_drv.h"
-#include "disp_drv_platform.h"
+#include "../../../platform/mt6589/kernel/drivers/video/disp_drv_platform.h"
 #include "disp_drv_log.h"
 
-#include "lcd_drv.h"
-#include "dpi_drv.h"
-#include "dsi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/lcd_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dsi_drv.h"
 
-#include "lcm_drv.h"
+#include "../../../custom/common/kernel/lcm/inc/lcm_drv.h"
 #endif
 // ---------------------------------------------------------------------------
 //  Private Variables

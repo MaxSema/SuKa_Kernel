@@ -29,10 +29,10 @@
 
 #include "debug.h"
 #include "disp_drv.h"
-#include <disp_drv_platform.h>
+#include "../../../platform/mt6589/kernel/drivers/video/disp_drv_platform.h"
 #include "disp_drv_log.h"
-#include "dpi_drv.h"
-#include "lcd_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/lcd_drv.h"
 #if defined (MTK_TVOUT_SUPPORT)
 #include "tv_out.h"
 #endif
@@ -40,7 +40,7 @@
 #include "mtkfb.h"
 #include "mtkfb_console.h"
 #include "mtkfb_info.h"
-#include "ddp_ovl.h"
+#include "../../../platform/mt6589/kernel/drivers/dispsys/ddp_ovl.h"
 
 unsigned int EnableVSyncLog = 0;
 

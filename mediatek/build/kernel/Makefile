@@ -34,7 +34,7 @@
 
 
 include $(srctree)/mediatek/build/Makefile
-$(call codebase-path,kernel,$(srctree),$TARGET_KERNEL_PRODUCT)
+$(call codebase-path,kernel,$(srctree),mt6589,eastaeon89_wet_jb2)
 #$(call relative-include,common.mk)
 include $(srctree)/mediatek/build/kernel/common.mk
 MODULE_PREFIX_KERNEL := CUSTOM_KERNEL_

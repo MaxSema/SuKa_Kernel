@@ -13,14 +13,13 @@ extern s32 mt_set_gpio_pull_enable(u32 pin, u32 enable);
 #include <asm/uaccess.h>
 
 #include "disp_drv.h"
-#include <disp_drv_platform.h>
+#include "../../../platform/mt6589/kernel/drivers/video/disp_drv_platform.h"
 #include "disp_drv_log.h"
-#include "lcd_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/lcd_drv.h"
 #include "lcm_drv.h"
-#include "dpi_drv.h"
-#include "dsi_drv.h"
-#include "dsi_reg.h"
-#include "disp_drv_platform.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dsi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dsi_reg.h"
 #include "debug.h"
 
 #include <linux/disp_assert_layer.h>

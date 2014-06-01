@@ -82,17 +82,17 @@
 
 #include "hdmi_drv.h"
 
-#include "disp_drv_platform.h"
-#include "ddp_reg.h"
-#include "ddp_dpfd.h"
-#include "ddp_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/disp_drv_platform.h"
+#include "../../../platform/mt6589/kernel/drivers/dispsys/ddp_reg.h"
+#include "../../../platform/mt6589/kernel/drivers/dispsys/ddp_dpfd.h"
+#include "../../../platform/mt6589/kernel/drivers/dispsys/ddp_drv.h"
 
-#include "dpi_drv.h"
-#include "dpi1_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi1_drv.h"
 
 //#include "lcd_reg.h"
-#include "dsi_drv.h"
-#include "dpi_reg.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dsi_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/dpi_reg.h"
 #include "mach/eint.h"
 #include "mach/irqs.h"
 #include "hdmitx.h"

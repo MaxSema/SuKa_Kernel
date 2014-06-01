@@ -2,12 +2,12 @@
 #include <asm/arch/disp_drv_platform.h>
 #else
 #include "disp_drv.h"
-#include "disp_drv_platform.h"
+#include "../../../platform/mt6589/kernel/drivers/video/disp_drv_platform.h"
 #include "disp_drv_log.h"
 #include <linux/disp_assert_layer.h>
 #include <linux/semaphore.h>
 #include <linux/mutex.h>
-#include "ddp_ovl.h"
+#include "../../../platform/mt6589/kernel/drivers/dispsys/ddp_ovl.h"
 
 #endif
 
@@ -23,7 +23,7 @@
 #include <asm/cacheflush.h>
 #include <linux/module.h>
 
-#include "lcd_drv.h"
+#include "../../../platform/mt6589/kernel/drivers/video/lcd_drv.h"
 #include "mtkfb_console.h"
 
 // ---------------------------------------------------------------------------
