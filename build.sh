@@ -19,6 +19,7 @@ OUT_DIRECTORY=../out/$TARGET_KERNEL_PRODUCT
 RAMDISK_DIRECTORY=../ramdisk/$TARGET_KERNEL_PRODUCT
 SCRIPTS_DIRECTORY=../scripts/$TARGET_KERNEL_PRODUCT
 CERTIFICATES_DIRECTORY=../.certificates
+SYSTEM_DIRECTORY=../system
 
 #Create and clean out directory for your device
 mkdir -p $OUT_DIRECTORY
@@ -27,20 +28,23 @@ rm $OUT_DIRECTORY/* -R
 fi
 
 #Kernel part
+make mediatek-configs
 make -j16
 cp arch/arm/boot/zImage $OUT_DIRECTORY/zImage
 
 #Modules part
 make INSTALL_MOD_STRIP=--strip-unneeded INSTALL_MOD_PATH=$OUT_DIRECTORY/system INSTALL_MOD_DIR=$OUT_DIRECTORY/system android_modules_install
+rm $OUT_DIRECTORY/system/lib/modules/{ccci.ko,ccci_plat.ko,devapc.ko,devinfo.ko,hid-logitech-dj.ko,mtk_fm_drv.ko,mtk_hif_sdio.ko,mtklfb.ko,mtk_stp_bt.ko,mtk_stp_gps.ko,mtk_stp_uart.ko,mtk_stp_wmt.ko,mtk_wmt_wifi.ko,pvrsrvkm.ko,scsi_tgt.ko,scsi_wait_scan.ko,sec.ko,vcodec_kernel_driver.ko,wlan_mt6628.ko}
 
 #Repack part
 if [ -d "$RAMDISK_DIRECTORY" ]; then
 ../mtk-tools/repack-MT65xx.pl -boot $OUT_DIRECTORY/zImage $RAMDISK_DIRECTORY $OUT_DIRECTORY/boot.img
-rm $OUT_DIRECTORY/zImage
+rm -r $OUT_DIRECTORY/{zImage,symbols}
 
 #Flashable zip build
 if [ -d "$SCRIPTS_DIRECTORY" ]; then
 cp $SCRIPTS_DIRECTORY/* $OUT_DIRECTORY -R
+cp $SYSTEM_DIRECTORY/* $OUT_DIRECTORY/system -R
 FLASHABLE_ZIP="$OUT_DIRECTORY/`cat DEVICE_NAME`-`make kernelversion`-`git rev-parse --short HEAD`"
 FLASHABLE_ZIP_2="`cat DEVICE_NAME`-`make kernelversion`-`git rev-parse --short HEAD`"
 echo "Creating flashable at '$FLASHABLE_ZIP'.zip"

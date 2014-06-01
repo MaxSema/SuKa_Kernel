@@ -111,7 +111,7 @@ endif
 
 # That's our default target when none is given on the command line
 PHONY := _all
-_all: .config
+_all:
 
 # Cancel implicit rules on top Makefile
 $(CURDIR)/Makefile Makefile: ;
@@ -1209,7 +1209,7 @@ endif # CONFIG_MODULES
 
 # Directories & files removed with 'make clean'
 CLEAN_DIRS  += $(MODVERDIR)
-CLEAN_FILES +=	vmlinux System.map \
+CLEAN_FILES +=	vmlinux System.map zImageOld\
                 .tmp_kallsyms* .tmp_version .tmp_vmlinux* .tmp_System.map
 
 # Directories & files removed with 'make mrproper'
