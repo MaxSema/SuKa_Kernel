@@ -45,8 +45,8 @@ rm -r $OUT_DIRECTORY/{zImage,symbols}
 if [ -d "$SCRIPTS_DIRECTORY" ]; then
 cp $SCRIPTS_DIRECTORY/* $OUT_DIRECTORY -R
 cp $SYSTEM_DIRECTORY/* $OUT_DIRECTORY/system -R
-FLASHABLE_ZIP="$OUT_DIRECTORY/`cat DEVICE_NAME`-`make kernelversion`-`git rev-parse --short HEAD`"
-FLASHABLE_ZIP_2="`cat DEVICE_NAME`-`make kernelversion`-`git rev-parse --short HEAD`"
+FLASHABLE_ZIP="$OUT_DIRECTORY/`cat DEVICE_NAME`-`make kernelversion`-V3.1"
+FLASHABLE_ZIP_2="`cat DEVICE_NAME`-`make kernelversion`-V3.1"
 echo "Creating flashable at '$FLASHABLE_ZIP'.zip"
 pushd $OUT_DIRECTORY
 zip -r -0 "$FLASHABLE_ZIP_2".zip .
