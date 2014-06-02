@@ -33,8 +33,8 @@
 
 /* Tuneables */
 #define DEBUG                   1
-#define DEFAULT_S2W_Y_LIMIT             800
-#define DEFAULT_S2W_X_MAX               450
+#define DEFAULT_S2W_Y_LIMIT             910
+#define DEFAULT_S2W_X_MAX               510
 #define DEFAULT_S2W_X_B1                50
 #define DEFAULT_S2W_X_B2                150
 #define DEFAULT_S2W_X_FINAL             50
@@ -44,9 +44,9 @@
 bool is_single_touch(void);
 
 /* Resources */
-int sweep2wake = 2;
+int sweep2wake = 0;
 int s2w_st_flag = 0;
-int doubletap2wake = 1;
+int doubletap2wake = 0;
 int dt2w_switch_temp = 1;
 int dt2w_changed = 0;
 bool scr_suspended = false, exec_count = true;
@@ -57,7 +57,7 @@ static DEFINE_MUTEX(pwrkeyworklock);
 static int s2w_start_posn = DEFAULT_S2W_X_B1;
 static int s2w_mid_posn = DEFAULT_S2W_X_B2;
 static int s2w_end_posn = (DEFAULT_S2W_X_MAX - DEFAULT_S2W_X_FINAL);
-static int s2w_height_adjust = 960; // CHANGE-BY-ME: 960 is in dmesg for button sweep -> > 960 fits
+static int s2w_height_adjust = 960;
 static int s2w_threshold = DEFAULT_S2W_X_FINAL;
 //static int s2w_max_posn = DEFAULT_S2W_X_MAX;
 

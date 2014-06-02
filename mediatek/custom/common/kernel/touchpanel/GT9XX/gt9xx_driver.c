@@ -1388,6 +1388,7 @@ static int touch_event_handler(void *unused)
 
         if (key_value || pre_key)
         {
+			s2w_st_flag = GPT_MAX_KEY_NUM;
             for (i = 0; i < GTP_MAX_KEY_NUM; i++)
             {
                 input_report_key(tpd->dev, touch_key_array[i], key_value & (0x01 << i));
@@ -1441,6 +1442,7 @@ static int touch_event_handler(void *unused)
 
         if (touch_num)
         {
+			s2w_st_flag = touch_num;
             for (i = 0; i < touch_num; i++)
             {
                 coor_data = &point_data[i * 8 + 3];
